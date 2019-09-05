@@ -5,7 +5,7 @@ export CONTECO_DESCRIPTION="The ElasticSearch Metricbeat base image."
 
 export CONTECO_TYPE="metricbeat"
 export CONTECO_NAME="base"
-export CONTECO_TAG="6.8.1"
+export CONTECO_TAG="7.1.1"
 
-export CONTECO_BASE="external.metricbeat:6.8.1"
+export CONTECO_BASE="external.metricbeat:7.1.1"
 export CONTECO_BUILD="image-base"
