@@ -1,0 +1,18 @@
+---
+version: '3'
+services:
+
+# START SERVICE metricbeat.base
+  metricbeat:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.metricbeat.base:7.1.1
+    environment: [${CONTECO_DC_METRICBEAT_ENVIRONMENT}] 
+    command: [metricbeat -e -strict.perms=false]
+    volumes: [${CONTECO_DC_METRICBEAT_VOLUMES}]
+    ports: [${CONTECO_DC_METRICBEAT_PORTS}]
+    networks: [${CONTECO_DC_METRICBEAT_NETWORKS}]
+    deploy: {${CONTECO_DC_METRICBEAT_DEPLOY}}
+# END SERVICE metricbeat.base
+
+networks:
+  ${CONTECO_DC_METRICBEAT_NETWORKS}:
+    external: true
