@@ -16,7 +16,7 @@ COPY ./ /conteco/repo/
 
 ##### BEGIN image/Dockerfile/build-instructions #####
 ENV CONTECO_ENTRYPOINT "/usr/local/bin/docker-entrypoint"
-# COPY ./conteco/${CONTECO_TYPE}/${CONTECO_NAME}/usr/share/metricbeat/metricbeat.yml /usr/share/metricbeat/metricbeat.yml
+#COPY ./conteco/configs/usr/share/metricbeat/metricbeat.yml /usr/share/metricbeat/metricbeat.yml
 #USER metricbeat
 ##### END image/Dockerfile/build-instructions #####
 
