@@ -7,7 +7,7 @@ services:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.metricbeat.base:7.1.1
     environment: [] 
     command: []
-    volumes: ['/etc:/hostfs/etc:r']
+    volumes: ['/etc:/hostfs/etc:ro']
     ports: []
     networks: [${CONTECO_DC_METRICBEAT_NETWORKS}]
     deploy:
