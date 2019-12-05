@@ -5,20 +5,21 @@ services:
 # START SERVICE metricbeat.base
   metricbeat:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.metricbeat.base:7.1.1
-    environment: [] 
+    environment: []
     command: []
     volumes: ['/etc:/hostfs/etc:ro']
     ports: []
     networks: [${CONTECO_DC_METRICBEAT_NETWORKS}]
     deploy:
       mode: ${CONTECO_DC_METRICBEAT_DEPLOY_MODE}
-      resources: 
-        limits: 
+      resources:
+        limits:
           cpus: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_LIMITS_CPUS}'
           memory: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_LIMITS_MEMORY}'
         reservations:
           cpus: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+      labels: [${CONTECO_DC_METRICBEAT_DEPLOY_LABELS}]
 # END SERVICE metricbeat.base
 
 volumes: {${CONTECO_DC_GLOBAL_VOLUMES}}
