@@ -9,9 +9,9 @@ services:
     command: []
     volumes: ['/etc:/hostfs/etc:ro']
     ports: []
-    networks: [${CONTECO_DC_METRICBEAT_NETWORKS}]
+    networks: [${CONTECO_TYPE}_overlay]
     deploy:
-      mode: ${CONTECO_DC_METRICBEAT_DEPLOY_MODE}
+      mode: replicated
       resources:
         limits:
           cpus: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_LIMITS_CPUS}'
@@ -19,8 +19,8 @@ services:
         reservations:
           cpus: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      labels: [${CONTECO_DC_METRICBEAT_DEPLOY_LABELS}]
+      labels: []
 # END SERVICE metricbeat.base
 
-volumes: {${CONTECO_DC_GLOBAL_VOLUMES}}
-networks: {${CONTECO_DC_GLOBAL_NETWORKS}}
+volumes: {}
+networks: {${CONTECO_TYPE}_overlay: { external: true }}
