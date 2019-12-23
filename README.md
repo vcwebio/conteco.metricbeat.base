@@ -1,13 +1,13 @@
-# The Conteco Metricbeat base
+# The `metricbeat.base` - ConteEco
 
-The ElasticSearch Metricbeat base image. 
+The ElasticSearch Metricbeat base image.
+See `conteco.docs.overview` for more information on the ContEco ecosystem.
 
-## Modifications
+## Configuration Changes
 
-None.
+Using some dummy configuration for the moment.
+The configuration will be redone using autodiscovery.
 
 ## Tags
 
 * 7.1.1
-* 6.8.1  
-* 6.6.2  

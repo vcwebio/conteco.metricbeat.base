@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export CONTECO_LABEL="Conteco metricbeat base"
+export CONTECO_LABEL="metricbeat.base - ConteEco"
 export CONTECO_DESCRIPTION="The ElasticSearch Metricbeat base image."
 
 export CONTECO_TYPE="metricbeat"
