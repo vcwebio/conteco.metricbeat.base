@@ -38,7 +38,7 @@ LABEL io.vcweb.schema-version="1.0" \
       io.vcweb.tag="7.1.1" \
       io.vcweb.base="external.metricbeat:7.1.1" \
       io.vcweb.build="image-base" \
-      io.vcweb.label="Conteco metricbeat base" \
+      io.vcweb.label="metricbeat.base - ConteEco" \
       io.vcweb.description="The ElasticSearch Metricbeat base image." \
       io.vcweb.docker.cmd.help="docker run vcwebio/conteco.metricbeat.base --help" 
 ##### END image.base/Dockerfile/env-labels-footer #####
