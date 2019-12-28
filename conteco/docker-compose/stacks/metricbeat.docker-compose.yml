@@ -7,7 +7,7 @@ services:
     image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.metricbeat.base:7.1.1
     environment: []
     command: []
-    volumes: ['/etc:/hostfs/etc:ro']
+    volumes: [${CONTECO_DC_METRICBEAT_VOLUMES}]
     ports: []
     networks: [${CONTECO_TYPE}_overlay]
     deploy:
@@ -19,8 +19,8 @@ services:
         reservations:
           cpus: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_METRICBEAT_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      labels: []
+      labels: [${CONTECO_DC_METRICBEAT_DEPLOY_LABELS}]
 # END SERVICE metricbeat.base
 
-volumes: {}
+volumes: {${CONTECO_DC_GLOBAL_VOLUMES}}
 networks: {${CONTECO_TYPE}_overlay: { external: true }}
