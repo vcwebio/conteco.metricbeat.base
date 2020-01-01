@@ -4,7 +4,7 @@ services:
 
 # START SERVICE metricbeat.base
   metricbeat:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.metricbeat.base:7.1.1
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/conteco.metricbeat.base:7.1.1
     environment: []
     command: []
     volumes: [${CONTECO_DC_METRICBEAT_VOLUMES}]
