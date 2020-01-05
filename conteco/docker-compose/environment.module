@@ -5,15 +5,13 @@ export CONTECO_DC_GLOBAL_STACKS="metricbeat.base"
 export CONTECO_DC_GLOBAL_STACKNAMES="metricbeat"
 export CONTECO_DC_GLOBAL_BOOTSTACKS=""
 export CONTECO_DC_GLOBAL_RUNSTACKS="metricbeat"
-export CONTECO_DC_GLOBAL_VOLUME_LIST="metricbeat_volume"
+export CONTECO_DC_GLOBAL_VOLUME_LIST="conteco_dc_metricbeat_volume"
 # END CONFIGURATION
 
 # START OTHER VARIABLES
 # END OTHER VARIABLES
 
 # START VOLUMES VARIABLES
-export CONTECO_DC_METRICBEAT_VOLUMES="'/etc:/hostfs/etc:ro','${CONTECO_TYPE}_metricbeat_volume:/usr/share/metricbeat/data'"
-export CONTECO_DC_GLOBAL_VOLUMES=""
 # END VOLUMES VARIABLES
 
 # START PORTS VARIABLES
