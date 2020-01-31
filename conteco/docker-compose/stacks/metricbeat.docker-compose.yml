@@ -4,7 +4,7 @@ services:
 
 # START SERVICE metricbeat.base
   metricbeat:
-    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/conteco.metricbeat.base:7.1.1
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM_RUNTIME}/conteco.metricbeat.base:7.1.1
     environment: []
     command: []
     volumes: ['/etc:/hostfs/etc:ro','${CONTECO_TYPE}_conteco_dc_metricbeat_volume:/usr/share/metricbeat/data']
