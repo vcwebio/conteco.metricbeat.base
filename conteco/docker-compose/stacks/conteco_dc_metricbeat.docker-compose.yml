@@ -11,7 +11,7 @@ services:
     ports: []
     networks: [${CONTECO_NETWORKLOCAL}_overlay]
     deploy:
-      mode: replicated
+      mode: ${CONTECO_DC_METRICBEAT_DEPLOY_MODE}
       ${CONTECO_DC_METRICBEAT_DEPLOY_MODE_REPLICATED_REPLICAS}
       resources:
         limits:
