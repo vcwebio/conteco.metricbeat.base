@@ -10,5 +10,5 @@ The configuration will be redone using autodiscovery.
 
 ## Tags
 
-* 7.8.0 (latest)  
+* 7.9.2 (latest)  
 * 7.1.1
